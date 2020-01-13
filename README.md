@@ -15,7 +15,7 @@ Solo hay que ponerle el token que os den donde pone MITOKEN
 
 Por cierto el indicador que saco es el de la tarifa por defecto 2.0A. Si alguien quiere otra (la 2.0 DHA por ejemplo) hay que cambiar el id del indicador en la URL
 
-Los sensores en HA he hecho asi. Uno que es command_line que ejecuta el script y saca el valor actual y el resto en un atributo (lo hago asi para solo llamar una vez a la api)
+Los sensores en HomeAssistant he hecho asi. Uno que es command_line que ejecuta el script y saca el valor actual y el resto en un atributo (lo hago asi para solo llamar una vez a la api)
 
 ```
 - platform: command_line
