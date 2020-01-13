@@ -17,6 +17,7 @@ Por cierto el indicador que saco es el de la tarifa por defecto 2.0A. Si alguien
 
 Los sensores en HA he hecho asi. Uno que es command_line que ejecuta el script y saca el valor actual y el resto en un atributo (lo hago asi para solo llamar una vez a la api)
 
+```
 - platform: command_line
   name: PVPC
   command: "python3 /DIEGO/PVPC/pvpc.py"
@@ -29,9 +30,11 @@ Los sensores en HA he hecho asi. Uno que es command_line que ejecuta el script y
     - Minimo
     - Media
     - BajoMedia
-    
+```
+
 Y luego si quieres tener los datos en otros sensores pues templates
 
+```
 - platform: template
   sensors:
     pvpc_max:
@@ -43,14 +46,15 @@ Y luego si quieres tener los datos en otros sensores pues templates
     pvpc_med:
       value_template: '{{ states.sensor.pvpc.attributes.Media }}'
       unit_of_measurement: "€"
-      
+```      
  
 O el binary_sensor
 
+```
 - platform: template
   sensors:
     pvpc_bajomedia:
       value_template: '{{ states.sensor.pvpc.attributes.BajoMedia }}'
-      
+```    
 
 
