@@ -1,5 +1,5 @@
 # PVPC-ESIOS
-Script para sacar informacion de las tarifas PVPC de ESIOS
+Script para sacar informacion de las tarifas PVPC de ESIOS. VERSION JUNIO 2021
 
 Hoy he estado haciendo un experimento cientifico. Como sabeis el que tenga la electricidad con una comercializadora de referencia puede tener la tarifa PVPC (que es el rollo ese que te cobran la luz a un precio distinto cada hora) Los datos del precio los publica red electrica a traves de si web (ESIOS) y se puede consultar via API (pidiendo previamente un token que te dan, a mi me lo han dado)
 
@@ -11,9 +11,9 @@ Da el precio actual, el maximo minimo y media del dia, y un true o false para sa
 
 Y con el binary_sensor controlar por ejemplo los calentadores de agua o radiadores para que se enciendan cuando el precio esta por debajo de la media
 
-Solo hay que ponerle el token que os den donde pone MITOKEN
+Solo hay que ponerle el token que os den donde pone MITOKEN Y LA GEOLICALIZACION DE LA TARIFA QUE QUEREMOS EN LA VARIABLE migeoid (Peninsula, Canarias, ...)
 
-Por cierto el indicador que saco es el de la tarifa por defecto 2.0A. Si alguien quiere otra (la 2.0 DHA por ejemplo) hay que cambiar el id del indicador en la URL
+El indicador que saco a fecha Junio 2021 es este: https://www.esios.ree.es/es/pvpc (Término de facturación de energía activa del PVPC)
 
 Los sensores en HomeAssistant he hecho asi. Uno que es command_line que ejecuta el script y saca el valor actual y el resto en un atributo (lo hago asi para solo llamar una vez a la api)
 
